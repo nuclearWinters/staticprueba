@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import * as msTeams from '@microsoft/teams-js';
+
 function App() {
   return (
     <div className="App">
@@ -23,4 +25,10 @@ function App() {
   );
 }
 
-export default App;
+function AppMSTeams() {
+  msTeams.initialize();
+  
+  return <App />;
+}
+
+export default AppMSTeams;
